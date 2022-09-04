@@ -1,0 +1,124 @@
+.title {
+  height: 43px;
+  width: 100%;
+  font-size: 12px;
+  padding:0px 20px;
+  line-height: 43px;
+  color: #666;
+  background-color: #f6f7f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  .oprate{
+    color: #5D8AA3;
+  }
+}
+.input-box {
+  box-sizing: border-box;
+  height: 72px;
+  margin: 0 20px;
+  position: relative;
+  .select {
+    position: absolute;
+    right: 0;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #5d8aa3;
+    bottom: 14px;
+  }
+  .label {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #666666;
+  }
+  .van-cell {
+    line-height: 24px;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    font-size: 17px;
+    padding-left: 0;
+  }
+}
+.info {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 12px 0;
+  .label {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    
+  }
+  .van-cell {
+    background-color: #f6f7f7;
+  }
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 72px;
+  z-index: 2;
+}
+
+.intention-type-info {
+  background: #fff;
+  margin-top: 10px;
+  padding: 10px 20px 0px 0px;
+  .intention-type-container {
+    font-size: 14px;
+    color: #666666;
+    margin: 0px 20px;
+    padding-bottom: 20px;
+    .intention-type{
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.recommend-container{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.des {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.wechat-container {
+  height: auto !important;
+  .wechat-tips {
+    color: #faad14;
+    font-size: 12px;
+    padding-bottom: 14px;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom:12px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top:6px;
+    .name{
+      color:var(--font-color-8);
+      margin-left: 8px;
+      line-height: 20px;
+    }
+    .del{
+      color:#5d8aa3;
+    }
+    .icon{
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+    }
+  }
+}

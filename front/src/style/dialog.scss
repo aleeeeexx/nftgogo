@@ -1,0 +1,15 @@
+.del-confirm-dialog {
+  .van-dialog__message {
+    color: var(--font-color-6);
+    font-size: 17px;
+  }
+  .van-dialog__confirm {
+    color: var(--font-color-8);
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .van-dialog__cancel {
+    color: var(--font-color-6);
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,9 @@
+.van-checkbox__icon .van-icon {
+  border-radius: 2px;
+}
+
+.van-checkbox__icon--round{
+  .van-icon {
+    border-radius: 100%;
+  }
+}

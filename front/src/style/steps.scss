@@ -1,0 +1,48 @@
+// 这是自己写的step样式，before是圆圈，after是竖线
+.steps-container {
+  .steps-item {
+    position: relative;
+    margin: 0px 0px 16px 20px;
+    padding: 14px 16px;
+    // width: 281px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    &.active::before {
+      content: '';
+      position: absolute;
+      left: -19px;
+      top: 18px;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: var(--theme-color) !important;
+      box-shadow: 0 0 0 3px #e4f0d7, 0 0 0 4px #ffffff !important;
+    }
+    &.normal::before {
+      content: '';
+      position: absolute;
+      left: -19px;
+      top: 18px;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: #c9c9c9;
+      box-shadow: 0 0 0 3px #eaeaea, 0 0 0 4px #ffffff;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -16px;
+      border-left: #eaeaea 2px solid;
+      height: calc(100% + 4px); /* item的高度减掉圆圈高度12加上marting-bottom的高度16 */
+    }
+    &:last-child::after {
+      display: none;
+    }
+    &.all-item{
+      margin-left: 40px;
+    }
+  }
+}

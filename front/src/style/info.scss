@@ -1,0 +1,373 @@
+@import './mixin.scss';
+// 标题，左右分布，可以包含一个右边操作项
+.info-show-title {
+  @include flex-between;
+  position: relative;
+  height: 42px;
+  padding: 0px 20px;
+  line-height: 42px;
+  color: var(--font-color-6);
+  font-size: 12px;
+  .operate {
+    color: var(--theme-color-2);
+    font-size: 14px;
+  }
+  &.black {
+    color: var(--font-color-8);
+  }
+  &.fold-up::after {
+    content: '';
+    position: absolute;
+    top: 44%;
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid var(--font-color-3);
+    border-bottom: 1px solid var(--font-color-3);
+    transform: rotate(135deg);
+  }
+  &.fold-down::after {
+    content: '';
+    position: absolute;
+    top: 44%;
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid var(--font-color-3);
+    border-bottom: 1px solid var(--font-color-3);
+    transform: rotate(-45deg);
+  }
+}
+//左右分布的信息展示
+.info-show-container {
+  background-color: #fff;
+  font-size: 16px;
+  .info-item {
+    @include flex-between-start;
+    padding: 16px 20px 16px 0px;
+    margin-left: 20px;
+    line-height: 22px;
+    .item-left {
+      color: var(--font-color-6);
+      white-space: nowrap;
+    }
+    .item-right {
+      color: var(--font-color-8);
+      text-align: right;
+      max-width: 60%;
+    }
+    .item-flex-right {
+      display: flex;
+      flex-direction: row;
+      .operate-btn {
+        width: 80px;
+        height: 28px;
+        border-radius: 14px;
+        line-height: 28px;
+        font-size: 12px;
+        text-align: center;
+      }
+      .green {
+        background: var(--theme-color);
+        color: #fff;
+      }
+      .white {
+        height: 26px;
+        background: #fff;
+        border: 1px solid #909090;
+        color: #454545;
+        margin-right: 10px;
+      }
+    }
+    position: relative;
+    &:not(:last-child)::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      top: -50%;
+      right: -50%;
+      bottom: -50%;
+      left: -50%;
+      border-bottom-width: 1px !important;
+      border: 0 solid var(--van-border-color);
+      transform: scale(0.5);
+    }
+  }
+}
+// 卡片信息展示，左右分布的标题，主内容顺着的flex
+.info-card-container {
+  margin: 0px 20px 10px 20px;
+  padding: 18px 10px 16px 20px;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 14px;
+  position: relative;
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border-width: 1px !important;
+    border: 0 solid var(--van-border-color);
+    border-radius: 6px;
+    transform: scale(0.5);
+  }
+  .card-title {
+    @include flex-between;
+    padding-bottom: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    position: relative;
+    &::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      top: -50%;
+      right: -50%;
+      bottom: -50%;
+      left: -50%;
+      border-bottom-width: 1px !important;
+      border: 0 solid var(--van-border-color);
+      transform: scale(0.5);
+    }
+    .left {
+      color: var(--font-color-8);
+      max-width: 80%;
+    }
+    .right {
+      color: var(--theme-color-2);
+      white-space: nowrap;
+      margin-right: 10px;
+    }
+  }
+  .card-detail {
+    padding: 10px 10px 0px 0px;
+    line-height: 26px;
+    .detail-item {
+      @include flex-row-start;
+      .item-label {
+        white-space: nowrap;
+        color: var(--font-color-3);
+      }
+      .item-val {
+        margin-left: 10px;
+        color: var(--font-color-6);
+      }
+    }
+  }
+}
+
+.info-form-label-val {
+  .title {
+    color: var(--font-color-8);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+    word-break: break-word;
+  }
+  .level-black-1 {
+    @include flex-row-start;
+    color: var(--font-color-6);
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .level-black-2 {
+    @include flex-row-start;
+    color: var(--font-color-6);
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 6px;
+  }
+  .level-grey {
+    @include flex-row-start;
+    color: var(--font-color-6);
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 6px;
+  }
+  .label {
+    white-space: nowrap;
+  }
+  .val {
+    margin-left: 10px;
+  }
+}
+
+// form表单选择，比如选择省市区
+.info-form-select-container {
+  background-color: #fff;
+  margin-bottom: 10px;
+  .info-form-select {
+    padding: 12px 20px 12px 0px;
+    margin-left: 20px;
+    position: relative;
+    &:not(:last-child)::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      top: -50%;
+      right: -50%;
+      bottom: -50%;
+      left: -50%;
+      border-bottom-width: 1px !important;
+      border: 0 solid var(--van-border-color);
+      transform: scale(0.5);
+    }
+    .label {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--font-color-6);
+    }
+    .item {
+      @include flex-between;
+      margin-top: 2px;
+      .val {
+        max-width: 70%;
+        font-size: 16px;
+        color: var(--font-color-8);
+        &.noSelect {
+          color: rgba(0, 0, 0, 0.18);
+        }
+      }
+      .select {
+        color: var(--theme-color-2);
+        font-size: 14px;
+        margin-top: 1px;
+        font-weight: 500;
+      }
+      .van-cell {
+        font-size: 16px;
+        padding: 0px;
+        margin-bottom: -2px;
+      }
+    }
+  }
+}
+
+// 底部操作样式，左侧图标加文字，右侧按钮
+.operate-bottom {
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(13.5914px);
+  .operate-button {
+    margin-top: 13px;
+    width: 335px;
+    height: 46px;
+    background: var(--theme-color);
+    color: #fff;
+    border-radius: 8px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    &.grey {
+      background: #e5e5ea;
+      color: var(--font-color-3);
+    }
+    &.white {
+      height: 44px;
+      background: #ffffff;
+      // border: var(--font-color-6) 1px solid;
+      // color: var(--font-color-8);
+      border: 1px solid var(--theme-color);
+      color: var(--theme-color);
+    }
+  }
+  .left-icon-operate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 5px;
+      color: var(--font-color-8);
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // 小个右侧成功按钮
+    .right-success-operate {
+      width: 162px;
+      height: 46px;
+      padding: 0px;
+      background: var(--theme-color);
+      color: #fff;
+      border-radius: 8px;
+      line-height: 46px;
+      text-align: center;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    // 小个右侧普通白色按钮
+    .right-normal-operate {
+      width: 162px;
+      height: 44px;
+      // border: 1px solid #909090;
+      // color: var(--font-color-8);
+      border: 1px solid var(--theme-color);
+      color: var(--theme-color);
+      border-radius: 8px;
+      line-height: 46px;
+      text-align: center;
+      font-size: 16px;
+    }
+    // 大个右侧成功按钮
+    .right-big-operate {
+      width: 262px;
+      height: 46px;
+      background: var(--theme-color);
+      color: #fff;
+      border-radius: 8px;
+      line-height: 46px;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
+
+// 提交按钮
+.submit-btn {
+  width: 335px;
+  height: 46px;
+  margin: 0 auto;
+  margin-top: 94px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 46px;
+  text-align: center;
+  border-radius: 46px;
+  &.success {
+    background: var(--theme-color);
+    color: #fff;
+  }
+  &.error {
+    background: #e5e5ea;
+    color: var(--font-color-3);
+  }
+  &.normal {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--font-color-8);
+  }
+}

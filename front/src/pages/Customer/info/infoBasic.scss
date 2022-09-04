@@ -1,0 +1,86 @@
+.info {
+  background: #fff;
+}
+.external-user {
+  margin: 0 20px;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+  .left {
+    display: flex;
+    align-items: center;
+    img {
+      width: 56px;
+      height: 56px;
+      border-radius: 4px;
+    }
+    .left-text {
+      margin-left: 14px;
+      .name {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+.fields {
+  margin-bottom: 10px;
+  :deep .van-cell {
+    padding: 12px 20px;
+  }
+  :deep .van-field__label {
+    font-size: 14px;
+    width: 70px;
+    margin-right: 0;
+  }
+}
+.edit-section {
+  display: flex;
+  justify-content: space-between;
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 50px;
+    display: flex;
+    align-items: center;
+  }
+}
+.house-section {
+  display: flex;
+  padding: 14px 0 9px 0;
+  margin: 0 20px;
+}
+.field-value {
+  font-size: 14px;
+  width: 100%;
+}
+.value-btn {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  .value {
+    width: 230px;
+  }
+}
+.btn {
+  font-size: 14px;
+  color: var(--theme-color-2);
+}
+.tag-group {
+  padding-top: 8px;
+}
+.tag {
+  margin-right: 8px;
+  padding: 2px 4px;
+  color: var(--font-color-3);
+  font-size: 11px;
+  background: #ffffff;
+  border: 1px solid #e5e5ea;
+  border-radius: 3px;
+}

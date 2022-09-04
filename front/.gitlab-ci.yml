@@ -1,0 +1,38 @@
+## 使用说明： https://git.vankeservice.com/pulin/backend/k8s-config/gitlab-ci-templates
+include:
+  - project: 'renz-public/gitlab-ci-templates'
+    ref: master
+    file: '.gitlab-ci-template.yml'
+
+## 定义变量, 供后面的任务使用, 请仔细核对
+variables:
+  PROD_BRANCH: master ## 选填
+  ## 测试环境分支, 默认是master分支
+  TEST_BRANCH: test ## 选填
+
+  TEST_WECHAT_KEY: '493ff754-ea92-4094-8df2-9efac98f627d' ## 选填,不填使用默认机器人
+  PROD_WECHAT_KEY: 'afc09182-179a-4968-b8b2-59390b676dc9' ## 选填,不填使用默认机器人
+  WECHAT_BODY: "{\"msgtype\": \"markdown\",\"markdown\":{\"content\": \"H5台项目构建🚀，请相关同事注意。\n>[代码地址]($CI_PROJECT_URL) \n>[前端地址](https://katarian-test.4009515151.com) \n>[pipeline地址]($CI_PIPELINE_URL) \n>本次构建由：$GITLAB_USER_NAME 触发 \n>提交commit: $CI_COMMIT_SHORT_SHA \n>构建分支：$CI_COMMIT_REF_NAME \n>提交日志：$CI_COMMIT_MESSAGE \n>[🗺发版(环境)历史]($CI_PROJECT_URL/environments)\" }}"
+  GROUP: weijia
+  # k8s ctx
+  TEST_CTX: weijia-test
+  PROD_CTX: weijia-prod
+
+## 用来缓存artifactory, 需要配置正确路径, 例如java maven编译生成的文件
+## 把下行的 "." 去掉可以开启
+cache:
+  paths:
+    - example-service/target
+    - node_modules/
+
+# 生成changelog
+release:
+  image: node:14.18.2
+  stage: docker-build
+  script:
+    - yarn
+    - npx semantic-release
+  only:
+    - master
+  tags:
+    - docker

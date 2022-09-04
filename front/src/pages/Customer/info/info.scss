@@ -1,0 +1,25 @@
+.info-order {
+  background: #fff;
+  margin-bottom: 10px;
+}
+.title {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding-top: 17px;
+  font-size: 16px;
+  color: var(--font-color-8);
+}
+.detail {
+  font-size: 14px;
+  .info {
+    padding: 16px 0;
+    margin: 16px 20px;
+    border-top: 1px solid #eeeeee;
+    color: var(--font-color-3);
+  }
+  .cards {
+    padding: 0 8px;
+  }
+}

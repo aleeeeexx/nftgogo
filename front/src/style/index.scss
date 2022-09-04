@@ -1,0 +1,31 @@
+body,
+html {
+  background-color: #f8f8f8;
+}
+#app {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+//全局设置页面跳转时顶部进度条颜色
+#nprogress .bar {
+  background: #5d8aa3 !important; //自定义颜色
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.18) !important;
+}
+
+@import './globalVar.scss';
+@import './common.scss';
+@import './search.scss';
+@import './dropdown.scss';
+@import './button.scss';
+@import './flex.scss';
+@import './list.scss';
+@import './tabs.scss';
+@import './info.scss';
+@import './mixin.scss';
+@import './picker.scss';
+@import './dialog.scss';
+@import './steps.scss';
+@import './checkbox.scss';

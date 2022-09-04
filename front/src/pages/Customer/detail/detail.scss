@@ -1,0 +1,20 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .tab {
+    font-size: 14px;
+    color: var(--font-color-6);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(248, 248, 248, 0) 100%);
+    text-align: center;
+    // width: 33%;
+    height: 48px;
+    line-height: 48px;
+  }
+  .active {
+    border-top: 2px solid var(--theme-color);
+    color: var(--theme-color);
+    font-weight: 500;
+    background: #fff;
+  }
+}

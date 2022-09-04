@@ -1,0 +1,86 @@
+# version: "3.1"
+# services:
+#   mongo:
+#     container_name: mongo
+#     #构建容器
+#     # build: ./dump
+#     image: mongo
+#     ports:
+#       - "27017:27017"
+#     restart: always
+#     volumes:
+#       - ./data/db:/data/db
+#   # mongo-express:
+#   #   image: mongo-express:latest
+#   #   container_name: mongo-express
+#   #   restart: always
+#   #   depends_on:
+#   #     - mongo
+#   #   ports:
+#   #     - 8081:8081
+#   server:
+#     container_name: server
+#     depends_on:
+#       - mongo
+#     #构建容器
+#     build: ./server
+#     ports:
+#       - "7001:7001"
+#   # front:
+#   #   container_name: front
+#   #   depends_on:
+#   #     - server
+#   #   #构建容器
+#   #   build: ./front
+#     # restart: always
+#     # ports:
+#     #   - "8888:3000"
+
+#   nginx:
+#     restart: always
+#     image: nginx
+#     ports:
+#       - 8091:80
+#     volumes:
+#       - ./nginx/conf.d/:/etc/nginx/conf.d
+#       - ./front/dist:/var/www/html/
+#       - ./static/:/static/
+
+
+
+
+
+
+
+
+
+
+version: '3.1'
+services:
+  server:
+    container_name: server
+    depends_on:
+      - mongo
+    #构建容器
+    build: ./server
+    ports:
+      - "7001:7001"
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+  mongo-express:
+    image: mongo-express
+    restart: always 
+    ports:
+      - 8081:8081
+  nginx:
+    restart: always
+    image: nginx
+    ports:
+      - 8092:80
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+      - ./front/dist:/var/www/html/
+      - ./static/:/static/

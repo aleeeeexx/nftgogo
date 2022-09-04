@@ -1,0 +1,100 @@
+.detail-house {
+  background: #fff;
+  padding: 16px 12px;
+  .house-card {
+    background: #fcfcfc;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    .card-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--theme-color-8);
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eaeaea;
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+      img,
+      span {
+        vertical-align: middle;
+      }
+    }
+    .card-detail {
+      padding-top: 16px;
+      font-size: 14px;
+      .detail-item {
+        margin-bottom: 12px;
+        .item-label {
+          color: var(--font-color-6);
+        }
+        .item-val {
+          color: var(--font-color-8);
+        }
+      }
+    }
+    .card-member {
+      border-top: 1px solid #eaeaea;
+      .title {
+        color: var(--font-color-6);
+        font-size: 14px;
+        padding: 16px 0;
+      }
+      .member {
+        &-item {
+          padding-bottom: 16px;
+          font-size: 14px;
+        }
+        &-name {
+          display: flex;
+          color: var(--font-color-8);
+          align-items: flex-end;
+          justify-content: space-between;
+          margin-bottom: 5px;
+          .left {
+            .name {
+              line-height: 20px;
+            }
+            .tag {
+              margin-left: 4px;
+              padding: 2px 4px;
+              color: var(--font-color-3);
+              font-size: 11px;
+              background: #ffffff;
+              border: 1px solid #e5e5ea;
+              border-radius: 3px;
+            }
+          }
+          .right {
+            color: var(--theme-color-2);
+            font-weight: 500;
+          }
+        }
+        &-mobile {
+          display: flex;
+          color: var(--font-color-6);
+          align-items: center;
+        }
+      }
+    }
+    .card-btns {
+      border-top: 1px solid #eaeaea;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 16px;
+      div {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.icon {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}

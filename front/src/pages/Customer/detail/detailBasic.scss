@@ -1,0 +1,132 @@
+.detail-basic {
+  position: relative;
+  margin: 16px 12px;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #fff;
+}
+.card-title {
+  padding-bottom: 8px;
+  .left {
+    color: var(--font-color-8);
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+  .middle {
+    color: var(--font-color-6);
+    font-size: 14px;
+  }
+}
+.card-subtitle {
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  span {
+    padding-top: 2px;
+    display: inline-block;
+  }
+}
+.card-detail {
+  padding-bottom: 12px;
+  line-height: 20px;
+  font-size: 14px;
+  .label {
+    padding-left: 4px;
+    white-space: nowrap;
+    color: var(--font-color-6);
+  }
+  .val {
+    color: var(--font-color-8);
+  }
+  .mr {
+    margin-right: 10px;
+  }
+}
+.card-bottom {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  .edit {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+  }
+}
+.icon {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin: 2px 4px 2px 0;
+}
+.location {
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  margin: 2px 4px 2px 0;
+}
+.status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  &-green {
+    color: #7ab439;
+    background: rgba(122, 180, 57, 0.1);
+  }
+  &-blue {
+    color: #1890ff;
+    background: rgba(24, 144, 255, 0.1);
+  }
+  &-grey {
+    color: var(--font-color-3);
+    background: rgba(102, 107, 118, 0.1);
+  }
+}
+.tag {
+  font-weight: 500;
+  font-size: 11px;
+  padding: 2px 8px;
+  margin-right: 5px;
+  border-radius: 8px 2px;
+  &-A {
+    color: #52c41a;
+    background: linear-gradient(270deg, rgba(82, 196, 26, 0.24) 0%, rgba(82, 196, 26, 0.1) 100%);
+  }
+  &-B {
+    color: #1890ff;
+    background: linear-gradient(270deg, rgba(24, 144, 255, 0.24) 0%, rgba(24, 144, 255, 0.1) 100%);
+  }
+  &-C {
+    color: #e7b025;
+    background: linear-gradient(270deg, rgba(231, 176, 37, 0.24) 0%, rgba(231, 176, 37, 0.1) 100%);
+  }
+  &-D {
+    color: #fa9730;
+    background: linear-gradient(270deg, rgba(250, 151, 48, 0.24) 0%, rgba(250, 151, 48, 0.1) 100%);
+  }
+  &-E {
+    color: #ff4d4f;
+    background: linear-gradient(270deg, rgba(255, 77, 79, 0.24) 0%, rgba(255, 77, 79, 0.1) 100%);
+  }
+}
+@mixin fold {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid var(--theme-color-2);
+  border-bottom: 1px solid var(--theme-color-2);
+  top: 2.5px;
+  left: 50px;
+}
+.btn {
+  color: var(--theme-color-2);
+  position: relative;
+  &.fold-down::after {
+    @include fold();
+    transform: rotate(-45deg);
+  }
+}

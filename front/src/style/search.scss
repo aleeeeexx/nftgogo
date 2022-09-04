@@ -1,0 +1,26 @@
+.van-search {
+  height: 40px;
+  padding: 6px 20px;
+  font-size: 12px;
+  .van-search__content {
+    opacity: 0.9;
+    border-radius: 4px;
+    .van-cell {
+      height: 28px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .left-back {
+    padding: 0px 10px;
+  }
+  .search-btn {
+    border-radius: 3px;
+    height: 28px;
+    margin-bottom: 6px;
+  }
+}
+
+.popup-van-search {
+  padding: 0px !important;
+}

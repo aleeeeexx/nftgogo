@@ -1,0 +1,104 @@
+.VanDialog {
+  .status {
+    .left {
+      margin-left: 20px;
+    }
+  }
+}
+.album {
+  .label {
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.title {
+  height: 43px;
+  font-size: 12px;
+  padding: 0 20px;
+  line-height: 43px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.room-item {
+  width: 335px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 0 0 20px;
+  margin-bottom: 10px;
+}
+.pancel,
+.status,
+.input {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .van-cell::after {
+    border: none;
+  }
+  .left {
+  }
+  .right {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    .Symbol {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f7;
+      border-radius: 50%;
+      font-size: 10px;
+      &:first-child {
+        margin-right: 12px;
+      }
+      &:last-child {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+.status {
+  height: 48px;
+  .right {
+    margin-right: 8px;
+  }
+  .left {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 72px;
+}
+.info {
+  height: 120px;
+  box-sizing: border-box;
+  .label {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+    padding-top: 12px;
+    .des {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .van-cell {
+    background-color: #f6f7f7;
+  }
+}

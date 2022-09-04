@@ -1,0 +1,116 @@
+@mixin header-text {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+@mixin title-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.85);
+}
+@mixin name-text {
+  font-size: 12px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.info {
+  width: 335px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 10px auto;
+  background: #fff;
+  border-radius: 8px;
+  .content {
+    font-size: 14px;
+    line-height: 28px;
+    .left {
+      color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      width: 94px;
+    }
+    .right {
+      margin-left: 12px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+}
+.card {
+  width: 335px;
+  margin: 10px auto;
+  background: #fff;
+  border-radius: 8px;
+  .header {
+    height: 56px;
+    box-sizing: border-box;
+    padding-left: 17px;
+    padding-top: 25px;
+    @include header-text();
+  }
+  .content {
+    margin-left: 20px;
+    .question {
+      height: 72px;
+      position: relative;
+      box-sizing: border-box;
+      padding-top: 16.5px;
+      padding-bottom: 14.5px;
+      .title {
+        @include title-text();
+      }
+      .name {
+        margin-top: 2px;
+        @include name-text();
+      }
+      .src {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+    .result {
+      height: 53px;
+      position: relative;
+      box-sizing: border-box;
+      .title {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.85);
+      }
+      .name {
+        @include name-text();
+      }
+      .src {
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 72px;
+}
+
+.card-title {
+  height: 43px;
+  font-size: 12px;
+  padding: 0 20px;
+  line-height: 43px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

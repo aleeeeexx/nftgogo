@@ -1,0 +1,32 @@
+:root {
+  --theme-color: #7ab439; //主题色
+  --theme-color-2: #5d8aa3; //界面主色
+  --theme-color-3: #f27e52; //操作主色
+  --theme-color-warn: #faad14; //警告信息色
+  --van-text-color-3: azure;
+  --font-color-8: rgba(0, 0, 0, 0.85); //文字颜色
+  --font-color-6: rgba(0, 0, 0, 0.6); //文字颜色
+  --font-color-3: rgba(0, 0, 0, 0.3); //文字颜色
+
+  --border-color: #eaeaea; //边框颜色
+  --line-color: #dedede; //边框颜色
+
+  --van-button-primary-border-color: #eaeaea;
+  --van-button-border-radius: 8px;
+  --van-field-input-text-color: azure;
+  // --van-field-placeholder-text-color: red;
+  --van-search-content-background-color: #f9f9f9;
+  --van-search-left-icon-color: #c9c9c9;
+
+  --van-dropdown-menu-height: 40px;
+  --van-dropdown-menu-title-font-size: 14px;
+  --van-dropdown-menu-title-text-color: var(--font-color-6);
+  --van-dropdown-menu-option-active-color: var(--theme-color);
+  --van-dropdown-menu-title-active-text-color: var(--theme-color);
+
+  --van-tab-text-color: var(--font-color-6);
+  --van-tab-active-text-color: var(--theme-color-2);
+  --van-tabs-bottom-bar-color: var(--theme-color-2);
+
+  --van-picker-confirm-action-color: var(--theme-color-2);
+}

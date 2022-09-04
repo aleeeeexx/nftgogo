@@ -1,0 +1,9 @@
+export const VUE_APP_LOGIN_URL = process.env.VUE_APP_LOGIN_URL
+export const VUE_APP_UPLOAD_URL = process.env.VUE_APP_UPLOAD_URL
+export const VUE_APP_CAMILLE_URL = process.env.VUE_APP_CAMILLE_URL
+export const VUE_APP_DIANA_URL = process.env.VUE_APP_DIANA_URL
+export const VUE_APP_BLACKSAM_URL = process.env.VUE_APP_BLACKSAM_URL
+export const VUE_APP_FD_URL = process.env.VUE_APP_FD_URL
+export const VUE_APP_BLACKBEARD_URL = process.env.VUE_APP_BLACKBEARD_URL
+export const VUE_APP_H5_URL = process.env.VUE_APP_H5_URL
+export const VUE_APP_WEIXIN = process.env.VUE_APP_WEIXIN

@@ -1,0 +1,72 @@
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-14 {
+  font-size: 16px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-weight {
+  font-weight: 500;
+}
+
+// 全局设置iphone底部安全区域问题
+.save-area {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+// 在foot下的vant按钮字体全局加粗
+.foot {
+  .van-button__text {
+    font-weight: 500;
+  }
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.no-data-text {
+  margin: 0 auto;
+  padding-top: 40px;
+  color: var(--font-color-6);
+  width: 70%;
+  text-align: center;
+}
+
+.dialog-content {
+  padding: 16px 24px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.van-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.van-popup--bottom.van-popup--round {
+  border-radius: 8px 8px 0 0;
+}
+
+.no-data-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:120px;
+  img{
+    width: 194px;
+    height: 176px;
+  }
+  span{
+    color: var(--font-color-3);
+    text-align: center;
+    margin-top: 8px;
+  }
+}

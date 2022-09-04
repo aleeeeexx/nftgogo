@@ -1,0 +1,39 @@
+.add-contarct-popup-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 260px;
+    width:95%;
+    top:180px;
+    .tips-container{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding:14px 20px;
+      background: rgba(93, 138, 163, 0.1);
+      .tips-det{
+        color:#5D8AA3;
+        font-size: 14px;
+        margin-left: 9px;
+        font-weight: 400;
+      }
+    }
+    .addContarct-title-container {
+      height: 44px;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0px 20px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      .addContarct-oprate {
+        color: var(--theme-color-2);
+        font-weight: 500;
+      }
+      .addContarct-title {
+        color: var(--font-color-8);
+      }
+    }
+  }
