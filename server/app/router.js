@@ -10,7 +10,7 @@ module.exports = app => {
   router.get('/getVerifyCode', controller.util.sendcode);
 
   const jwt = app.middleware.jwt({ app });
-  router.group({ name: 'user', prefix: '/user' }, router => {
+  router.group({ name: 'user', prefix: '/api/user' }, router => {
     const {
       info,
       register,
@@ -27,10 +27,10 @@ module.exports = app => {
       cancelLikeArticle,
     } = controller.user;
 
-    router.post('/api/register', register);
-    router.post('/api/login', login);
+    router.post('/register', register);
+    router.post('/login', login);
 
-    router.get('/api/usrInfo', jwt, info);
+    router.get('/usrInfo', jwt, info);
     // router.put('/info', jwt, updateInfo);
     // router.get('/detail', jwt, info);
 
