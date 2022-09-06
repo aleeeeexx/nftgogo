@@ -79,7 +79,7 @@ services:
     restart: always
     image: nginx
     ports:
-      - 8092:80
+      - 80:80
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d
       - ./front/dist:/var/www/html/
