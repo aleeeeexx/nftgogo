@@ -27,10 +27,10 @@ module.exports = app => {
       cancelLikeArticle,
     } = controller.user;
 
-    router.post('/register', register);
-    router.post('/login', login);
+    router.post('/api/register', register);
+    router.post('/api/login', login);
 
-    router.get('/usrInfo', jwt, info);
+    router.get('/api/usrInfo', jwt, info);
     // router.put('/info', jwt, updateInfo);
     // router.get('/detail', jwt, info);
 
