@@ -7,7 +7,7 @@ let BASE_URL
 if (process.env.NODE_ENV === 'development') {
   BASE_URL = 'http://localhost:7001' //本地开发node后端地址
 } else {
-  BASE_URL = 'http://localhost:7001' //后续生产地址
+  BASE_URL = '' //后续生产地址
 }
 // import { useRouter } from 'vue-router'
 interface ApiResult {
