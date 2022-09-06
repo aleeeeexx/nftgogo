@@ -68,7 +68,7 @@ export const refreshToken = async (data: object) => {
 // 验证码登录
 export const loginByVerifyCode = async (data: object) => {
   const res = await request({
-    url: '/user/register',
+    url: '/api/user/register',
     method: 'post',
     data
   })
@@ -77,7 +77,7 @@ export const loginByVerifyCode = async (data: object) => {
 
 export const getUsrInfo = async () => {
   const res = await request({
-    url: '/user/usrInfo',
+    url: '/api/user/usrInfo',
     method: 'get'
   })
   return res
