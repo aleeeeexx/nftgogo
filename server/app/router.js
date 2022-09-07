@@ -26,7 +26,7 @@ module.exports = app => {
       likeArticle,
       cancelLikeArticle,
     } = controller.user;
-
+    console.log('routeraleeeeeeex');
     router.post('/register', register);
     router.post('/login', login);
 

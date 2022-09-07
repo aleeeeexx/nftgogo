@@ -45,6 +45,7 @@ class UserController extends BaseController {
     this.success({ token, email, nickname: user.nickname });
   }
   async register() {
+    console.log('registerregisterregisterregisterregisterregisterregisterregisterregisterregister');
     this.message('注册成功');
     const { ctx, app } = this;
     // try {
