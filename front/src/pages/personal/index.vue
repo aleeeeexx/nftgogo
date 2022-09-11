@@ -24,7 +24,7 @@
         >
           <div class="card-item" v-for="item in list" :key="item" :title="item">
             <img
-              src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/08/25/af02394e-1f72-415c-b09c-e325af362b88.jpg"
+              src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/657e248a-79af-43ba-ac20-ccfbc8fa9cc0.png"
               alt=""
             />
             <div class="text">toyaya Li |Cyber</div>

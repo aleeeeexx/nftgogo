@@ -1,10 +1,10 @@
 <template>
-  <div class="handler save-area" :style="`background: ${bgColor};height: ${height}`"></div>
+  <!-- <div class="handler save-area" :style="`background: ${bgColor};height: ${height}`"></div> -->
   <div class="bar save-area" :style="`height: ${height}`">
     <div class="content">
       <div class="tab-item" active-class="isActive" :style="`height: ${height}`">
         <van-icon name="wap-home-o" size="30" color="#fff" />
-        <router-link class="item-wrap" to="/mobile-login"> 主页 </router-link>
+        <router-link class="item-wrap" to="/index"> 主页 </router-link>
       </div>
       <div class="tab-item" active-class="isActive" :style="`height: ${height}`">
         <van-icon name="contact" size="30" color="#fff" />

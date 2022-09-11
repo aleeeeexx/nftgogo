@@ -12,6 +12,7 @@ const Activity = () => import(/* webpackChunkName: "Activity" */ '@/pages/activi
 const getCoupon = () => import(/* webpackChunkName: "getCoupon" */ '@/pages/common/GetCoupon.vue')
 const mobileLogin = () => import(/* webpackChunkName: "mobileLogin" */ '@/pages/mobile-login.vue')
 const personal = () => import(/* webpackChunkName: "personal" */ '@/pages/personal/index.vue')
+const index = () => import(/* webpackChunkName: "personal" */ '@/pages/index/index.vue')
 
 // 1. 定义路由组件.
 // 也可以从其他文件导入
@@ -43,6 +44,20 @@ const routes = [
     component: personal,
     meta: {
       title: '个人中心'
+    }
+  },
+  {
+    path: '/index',
+    component: index,
+    meta: {
+      title: '首页'
+    }
+  },
+  {
+    path: '/',
+    component: index,
+    meta: {
+      title: '首页'
     }
   },
   {
