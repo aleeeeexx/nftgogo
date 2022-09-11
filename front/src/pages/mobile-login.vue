@@ -112,7 +112,7 @@ const login = async () => {
   console.log(userInfo)
   if (userInfo.phone) {
     setStorage(userInfo)
-    router.replace('/personal-center')
+    router.replace('/index')
   }
   console.log(localStorage.getItem('access_token'), 'getItem')
   console.log(decodeURIComponent(route.query.redirect as string))
