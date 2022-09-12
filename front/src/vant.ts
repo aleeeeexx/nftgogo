@@ -23,7 +23,9 @@ import {
   Cascader,
   Lazyload,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Divider,
+  Progress
 } from 'vant'
 import { App } from '@vue/runtime-core'
 import 'vant/lib/index.css'
@@ -54,6 +56,8 @@ const installVant = (app: App) => {
   app.use(Lazyload)
   app.use(Checkbox)
   app.use(CheckboxGroup)
+  app.use(Progress)
+  app.use(Divider)
   return app
 }
 

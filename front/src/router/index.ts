@@ -13,6 +13,7 @@ const getCoupon = () => import(/* webpackChunkName: "getCoupon" */ '@/pages/comm
 const mobileLogin = () => import(/* webpackChunkName: "mobileLogin" */ '@/pages/mobile-login.vue')
 const personal = () => import(/* webpackChunkName: "personal" */ '@/pages/personal/index.vue')
 const index = () => import(/* webpackChunkName: "personal" */ '@/pages/index/index.vue')
+const detail = () => import(/* webpackChunkName: "personal" */ '@/pages/details/index.vue')
 
 // 1. 定义路由组件.
 // 也可以从其他文件导入
@@ -29,6 +30,14 @@ const routes = [
     component: mobileLogin,
     meta: {
       title: '手机号登录'
+    }
+  },
+  {
+    path: '/get-coupon',
+    component: getCoupon,
+    meta: {
+      title: '领取优惠券',
+      isAuth: false
     }
   },
   {
@@ -61,11 +70,11 @@ const routes = [
     }
   },
   {
-    path: '/get-coupon',
-    component: getCoupon,
+    path: '/detail',
+    component: detail,
     meta: {
-      title: '领取优惠券',
-      isAuth: false
+      title: '详情',
+      hideTab: true
     }
   },
   ...BusinessOpportunity,

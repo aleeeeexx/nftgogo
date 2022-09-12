@@ -4,16 +4,17 @@
       <component :is="Component" v-if="$route.meta.keepAlive" :key="$route.fullPath" />
     </keep-alive> -->
     <component :is="Component" v-if="!$route.meta.keepAlive" :key="$route.fullPath" />
-    <TabBar></TabBar>
+    <TabBar v-if="!route.meta.hideTab"></TabBar>
   </router-view>
 </template>
 <script lang="ts" setup>
 import { ref, nextTick, provide } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 
 import TabBar from '@/components/tabbar/index.vue'
 
 const router = useRouter()
+const route = useRoute()
 const isRouterAlive = ref(true)
 // 强制刷新页面，但没有刷新的闪动效果
 const onRefresh = () => {
