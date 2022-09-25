@@ -3,7 +3,7 @@
     <div class="profile">
       <div class="p-t">
         <img
-          src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/eee9f8b8-9793-4840-8804-1533106867d1.png"
+          src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/92643ff6-407b-473d-9e71-e207fee7fe98.png"
           alt=""
         />
       </div>
@@ -35,7 +35,7 @@
             >
               <div class="card-item" v-for="item in list" :key="item" :title="item">
                 <img
-                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/657e248a-79af-43ba-ac20-ccfbc8fa9cc0.png"
+                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/462bbaff-6054-455f-8d13-26c4fc80e9b3.jpeg"
                   alt=""
                 />
                 <div class="text">toyaya Li |Cyber</div>
@@ -61,7 +61,7 @@
             >
               <div class="card-item" v-for="item in list" :key="item" :title="item">
                 <img
-                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/657e248a-79af-43ba-ac20-ccfbc8fa9cc0.png"
+                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/28054016-747c-486b-8bfb-4b6ab96cc26f.jpeg"
                   alt=""
                 />
                 <div class="text">toyaya Li |Cyber</div>

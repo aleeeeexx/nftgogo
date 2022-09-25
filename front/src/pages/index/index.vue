@@ -5,6 +5,12 @@
         <div class="titl-l">THE CITY OF XUESEN</div>
         <div class="titl-r"></div>
       </div>
+      <div class="video-con">
+        <video autoplay controls muted>
+          <source src="https://uaenft.io/assets/img/gallery/mars-2117.mp4" type="video/mp4" />
+          您的浏览器不支持Video标签。
+        </video>
+      </div>
       <div class="list" v-if="list.length">
         <van-list
           v-model:loading="loading"
@@ -37,7 +43,7 @@ const list = ref([
     saleprogress: '20'
   },
   {
-    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/e2bd2a10-fa6f-4e22-8475-12a0071e925f.jpeg',
+    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/099295ad-c0a8-4aa2-8cdd-e48f3ce1dfef.jpeg',
     nftname: 'Cyber Galaxy 赛博星球',
     tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
     sales: 1999,
@@ -46,7 +52,7 @@ const list = ref([
     saleprogress: '20'
   },
   {
-    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/f5f4332b-3d96-4409-8b66-dbfad367057a.jpeg',
+    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/e99ba052-e2ae-4ba2-87a9-6259e3498c49.jpeg',
     nftname: 'Cyber Galaxy 赛博星球',
     tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
     sales: 1999,
@@ -56,6 +62,42 @@ const list = ref([
   },
   {
     img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/0b3c1874-0ad7-4052-a96c-f9b056daa18a.png',
+    nftname: 'Cyber Galaxy 赛博星球',
+    tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
+    sales: 1999,
+    price: '299.00',
+    creator: '像素公司',
+    saleprogress: '20'
+  },
+  {
+    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/d4458560-f5f7-4a43-a27d-5cb22a0908f8.jpeg',
+    nftname: 'Cyber Galaxy 赛博星球',
+    tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
+    sales: 1999,
+    price: '299.00',
+    creator: '像素公司',
+    saleprogress: '20'
+  },
+  {
+    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/28054016-747c-486b-8bfb-4b6ab96cc26f.jpeg',
+    nftname: 'Cyber Galaxy 赛博星球',
+    tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
+    sales: 1999,
+    price: '299.00',
+    creator: '像素公司',
+    saleprogress: '20'
+  },
+  {
+    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/03539720-a12b-4633-a4a0-5f8b6d09f176.jpeg',
+    nftname: 'Cyber Galaxy 赛博星球',
+    tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
+    sales: 1999,
+    price: '299.00',
+    creator: '像素公司',
+    saleprogress: '20'
+  },
+  {
+    img: 'https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/462bbaff-6054-455f-8d13-26c4fc80e9b3.jpeg',
     nftname: 'Cyber Galaxy 赛博星球',
     tags: ['新锐艺术家', '盲盒头像', '限量1999份'],
     sales: 1999,
@@ -87,7 +129,14 @@ const onLoad = () => {
 <style lang="scss" scoped>
 .index {
   padding: 20px;
+  background-image: url(https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/60556970-1d08-4bac-8997-888f23523a9d.png);
+  background-position: center top;
+  background-size: auto auto;
+  background-repeat: no-repeat;
   .main {
+    video {
+      width: 100%;
+    }
     .cont-tit {
       color: #fff;
       padding: 20px 0;
@@ -96,7 +145,8 @@ const onLoad = () => {
       }
     }
     .list {
-      padding-bottom: 15px;
+      margin-top: 20px;
+      padding-bottom: 40px;
     }
   }
 }
