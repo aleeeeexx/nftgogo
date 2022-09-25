@@ -6,6 +6,7 @@ import '@/style/index.scss'
 import 'nprogress/nprogress.css'
 import store from '@/store'
 import components from '@/components/index'
+import '@/assets/iconfont/iconfont.js'
 // 非生产环境下显示vconsole
 if (!process.env.VUE_APP_HIDDEN_VCONSOLE) {
   const VConsole = () => import(/* webpackChunkName: "vconsole" */ 'vconsole')

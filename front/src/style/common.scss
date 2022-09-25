@@ -55,18 +55,26 @@
   border-radius: 8px 8px 0 0;
 }
 
-.no-data-container{
+.no-data-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:120px;
-  img{
+  margin-top: 120px;
+  img {
     width: 194px;
     height: 176px;
   }
-  span{
+  span {
     color: var(--font-color-3);
     text-align: center;
     margin-top: 8px;
   }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }

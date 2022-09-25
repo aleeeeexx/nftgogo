@@ -25,7 +25,9 @@ import {
   Checkbox,
   CheckboxGroup,
   Divider,
-  Progress
+  Progress,
+  Tabbar,
+  TabbarItem
 } from 'vant'
 import { App } from '@vue/runtime-core'
 import 'vant/lib/index.css'
@@ -58,6 +60,8 @@ const installVant = (app: App) => {
   app.use(CheckboxGroup)
   app.use(Progress)
   app.use(Divider)
+  app.use(Tabbar)
+  app.use(TabbarItem)
   return app
 }
 

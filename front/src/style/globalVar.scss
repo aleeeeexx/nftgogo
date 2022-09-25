@@ -15,7 +15,8 @@
   --van-button-border-radius: 8px;
   --van-field-input-text-color: azure;
   // --van-field-placeholder-text-color: red;
-  --van-search-content-background-color: #f9f9f9;
+  --van-search-content-background-color: #000;
+  --van-search-background-color: #000;
   --van-search-left-icon-color: #c9c9c9;
 
   --van-dropdown-menu-height: 40px;
@@ -29,4 +30,6 @@
   --van-tabs-bottom-bar-color: var(--theme-color-2);
 
   --van-picker-confirm-action-color: var(--theme-color-2);
+  --van-tabbar-item-active-background-color: #000;
+  --van-tabbar-background-color: #000;
 }

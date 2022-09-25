@@ -1,6 +1,103 @@
 <template>
   <div class="personal">
-    <div class="header">
+    <div class="profile">
+      <div class="p-t">
+        <img
+          src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/25/eee9f8b8-9793-4840-8804-1533106867d1.png"
+          alt=""
+        />
+      </div>
+      <div class="p-name">coconutman</div>
+      <div class="p-hash">0x701b6b6479d01e963ec5</div>
+    </div>
+    <div class="tabs">
+      <van-tabs
+        v-model:active="active"
+        background="#000"
+        title-inactive-color="#8E8E95"
+        title-active-color="#fff"
+        animated
+      >
+        <van-tab title="Collected">
+          <template #title>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-all"></use>
+            </svg>
+            Collected
+          </template>
+          <van-search v-model="value" placeholder="请输入搜索关键词" />
+          <div class="content-list">
+            <van-list
+              v-model:loading="loading"
+              :finished="finished"
+              finished-text="没有更多了"
+              @load="onLoad"
+            >
+              <div class="card-item" v-for="item in list" :key="item" :title="item">
+                <img
+                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/657e248a-79af-43ba-ac20-ccfbc8fa9cc0.png"
+                  alt=""
+                />
+                <div class="text">toyaya Li |Cyber</div>
+                <div class="text">toyaya Li |Cyber</div>
+              </div>
+            </van-list>
+          </div>
+        </van-tab>
+        <van-tab title="Created">
+          <template #title>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-component"></use>
+            </svg>
+            Created
+          </template>
+          <van-search v-model="value" placeholder="请输入搜索关键词" />
+          <div class="content-list">
+            <van-list
+              v-model:loading="loading"
+              :finished="finished"
+              finished-text="没有更多了"
+              @load="onLoad"
+            >
+              <div class="card-item" v-for="item in list" :key="item" :title="item">
+                <img
+                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/657e248a-79af-43ba-ac20-ccfbc8fa9cc0.png"
+                  alt=""
+                />
+                <div class="text">toyaya Li |Cyber</div>
+                <div class="text">toyaya Li |Cyber</div>
+              </div>
+            </van-list>
+          </div>
+        </van-tab>
+        <van-tab title="Favorited">
+          <template #title>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-fabulous"></use>
+            </svg>
+            Favorited
+          </template>
+          <div class="content-list">
+            <van-list
+              v-model:loading="loading"
+              :finished="finished"
+              finished-text="没有更多了"
+              @load="onLoad"
+            >
+              <div class="card-item" v-for="item in list" :key="item" :title="item">
+                <img
+                  src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/09/11/657e248a-79af-43ba-ac20-ccfbc8fa9cc0.png"
+                  alt=""
+                />
+                <div class="text">toyaya Li |Cyber</div>
+                <div class="text">toyaya Li |Cyber</div>
+              </div>
+            </van-list>
+          </div>
+        </van-tab>
+      </van-tabs>
+    </div>
+    <!-- <div class="header">
       <div class="avatar">
         <img
           src="https://black-pearl.oss-cn-shenzhen.aliyuncs.com/2022/08/25/af02394e-1f72-415c-b09c-e325af362b88.jpg"
@@ -12,8 +109,8 @@
         <div class="id">id:{{ '12345' }}</div>
         <div class="hash">区块链地址:ghr10xhfzvVaymek4mjh</div>
       </div>
-    </div>
-    <div class="content">
+    </div> -->
+    <!-- <div class="content">
       <div class="content-tit">我的藏品</div>
       <div class="content-list">
         <van-list
@@ -32,7 +129,7 @@
           </div>
         </van-list>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -41,11 +138,13 @@ import { ref } from 'vue'
 // import { useRoute, useRouter } from 'vue-router'
 import { getUsrInfo } from '@/api/user'
 // import { setStorage } from '@/utils/pulin-login'
-// import { Toast } from 'vant'
+// import { Tab, Tabs } from 'vant'
 
 const list = ref([])
 const loading = ref(false)
 const finished = ref(false)
+const active = ref(0)
+const value = ref('')
 const onLoad = () => {
   // 异步更新数据
   // setTimeout 仅做示例，真实场景中一般为 ajax 请求
@@ -73,6 +172,83 @@ getInfo()
 </script>
 
 <style lang="scss" scoped>
+:deep .van-search {
+  margin-top: 20px;
+  border: 1px solid #4f4f4f !important;
+  border-radius: 4px;
+}
+.personal {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  padding: 25px 8px;
+  box-sizing: border-box;
+  color: azure;
+  .profile {
+    .p-t {
+      display: flex;
+      margin-top: 20px;
+      img {
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+    }
+    .p-name {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 24px;
+      font-weight: 500;
+    }
+    .p-hash {
+      color: azure;
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+  .tabs {
+    margin-top: 20px;
+    :deep .van-tabs--line .van-tabs__wrap {
+      border-bottom-color: #4f4f4f !important;
+    }
+    .content-list {
+      margin-top: 10px;
+
+      .van-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      :deep .van-list__finished-text {
+        width: 100%;
+        text-align: center;
+      }
+      :deep .van-list__loading {
+        width: 100%;
+        text-align: center;
+      }
+      .card-item {
+        background-color: #1e1e1e;
+        width: 43%;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+        .text {
+          padding: 4px 6px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
 .personal {
   width: 100vw;
   min-height: 100vh;
